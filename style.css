@@ -1,0 +1,249 @@
+html, body {
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100vh;
+      font-family: "Monument Extended";
+      background: url(https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif) no-repeat 50% 50%;
+      background-size: cover;
+      text-transform: uppercase;
+}
+
+.gif-overlay {
+      z-index: -1;
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100vh;
+      background: rgba(14, 14, 14, 0.8);
+}
+
+.nav {
+      position: fixed;
+      width: 100%;
+      height: 80px;
+}
+
+.artist {
+      z-index: 2;
+      position: fixed;
+      line-height: 80px;
+      margin: 0 40px;
+      color: #fff;
+}
+
+.watch {
+      z-index: 2;
+      position: fixed;
+      right: 140px;
+      line-height: 80px;
+      margin: 0 40px;
+      color: grey;
+      padding: 0 10px;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 100;
+      letter-spacing: 4px;
+}
+
+.watch ion-icon {
+      z-index: 2;
+      position: relative;
+      top: 1px;
+      padding-right: 6px;
+}
+
+.menu {
+      z-index: 2;
+      position: fixed;
+      right: 0;
+      font-size: 20px;
+      line-height: 80px;
+      margin: 0 40px;
+      color: #fff;
+      padding-top: 4px;
+}
+
+.hero-gif {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48vw;
+      height: 46vh;
+      background: url(hiphop.gif) no-repeat 50% 50%;
+      background-size: cover;
+      animation-delay: 2s;
+      -webkit-animation: animateGIF 4s cubic-bezier(0,.58,1,.58);
+}
+
+@-webkit-keyframes animateGIF {
+      0% {
+            width: 100%;
+            height: 100%;  
+      }
+
+      40% {
+            width: 100%;
+            height: 100%;
+      }
+
+      100% {
+            width: 48vw;
+            height: 46vh;
+      }
+}
+
+.hero-title {
+      position: absolute;
+      top: 40%;
+      left: 38%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+}
+
+.hero-title h1 {
+      color: red;
+      text-transform: uppercase;
+      font-size: 80px;
+      margin-bottom: 0%;
+}
+  
+.glitch {
+      position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+
+.glitch::before {
+      left: 4px;
+      text-shadow: -31px 0 rgb(0, 174, 255);
+      background: black;
+    }
+.glitch::after {
+      left: -3px;
+      text-shadow: -3px 0 blue;
+      background: black;
+}
+
+.glitch::before {
+      clip: rect(54px, 250px, 56px, 40px);
+}
+
+@keyframes noise-anim {
+      0% {
+        clip-path: inset(40% 0 61% 0);
+      }
+      20% {
+        clip-path: inset(92% 0 1% 0);
+      }
+      40% {
+        clip-path: inset(43% 0 1% 0);
+      }
+      60% {
+        clip-path: inset(25% 0 58% 0);
+      }
+      80% {
+        clip-path: inset(54% 0 7% 0);
+      }
+      100% {
+        clip-path: inset(58% 0 43% 0);
+      }
+}
+
+.glitch::before {
+      animation: noise-anim 2s infinite linear alternate-reverse;
+}
+    
+.glitch::after {    
+      animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.hero-title p {
+      color: grey;
+      font-family: Helvetica;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 14px;
+}
+
+.social-media {
+      position: absolute;
+      bottom: .5%;
+      transform: translateY(-50%);
+}
+
+.social-media ul li {
+      display: inline-block;
+      list-style: none;
+      color: grey;
+      padding: 0 10px;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 100;
+}
+
+.listensong {
+      position: absolute;
+      bottom: 0%;
+      right: 40px;
+      transform: translateY(-50%);
+}
+
+.listensong ul li {
+      display: inline-block;
+      list-style: none;
+      color: #fff;
+      padding: 0 10px;
+}
+
+#rotated  {
+      color: #fff;
+      font-family: Helvetica;
+      font-weight: 100;
+      font-size: 12px;
+}
+
+.rotatethis {
+      position: absolute;
+      top: 54%;
+      left: 74%;
+      transform: translate(-50%, -50%);
+      animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating  {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+@media(max-width: 900px) {
+      .watch, .rotatethis, .hero-title p, .hero-gif {
+            display: none !important;
+      }
+
+      .hero-title {
+            top: 45%;
+            left: 50%;
+      }
+
+      .hero-title h1 {
+            font-size: 32px;
+      }
+}
+
+
+
+
